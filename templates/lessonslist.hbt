@@ -1,0 +1,18 @@
+<!-- lessons list -->
+
+{{> header}}
+
+<h2>{{title}}</h2>
+
+<article>
+    <ul>
+        {{#each collections.lessons}}
+            <li>
+                <h3>{{this.title}}</h3>
+                {{this.contents}}
+            </li>
+        {{/each}}
+    </ul>
+</article>
+
+{{> footer}}
