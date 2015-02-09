@@ -16,12 +16,12 @@ handlebars.registerPartial('navigation', fs.readFileSync(__dirname + '/templates
 // Initialize and configure metalsmith 
 metalsmith(__dirname)
 	.use(collections({
-					    pages:{ pattern: 'content/pages/*.md'},
+					    pages:  { pattern: 'content/pages/*.md'},
 					    lessons:{
-								pattern: 'content/lessons/*.md',
-								sortBy: 'date',
-								reverse: true
-							  }
+								  pattern: 'content/lessons/*.md',
+								  sortBy: 'date',
+								  reverse: true
+							    }
 					 }))
 	.use(markdown())
 	.use(permalinks({ pattern: ':collection/:title' }))
@@ -36,4 +36,3 @@ metalsmith(__dirname)
 					console.log('Build complete...');
 				}
 			});
-	
